@@ -18,7 +18,6 @@ class IndexController
         $this->view->show("LearningStyleView.php");
     } 
 
-
     public function showCampus()
     {
         $this->view->show("CampusView.php");

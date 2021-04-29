@@ -160,4 +160,25 @@ class MainController
             echo 'Avanzado';
 
     }
+
+    public function networkClass(){
+
+        $input['RE'] = $_POST['RE'];
+        $input['LI'] = $_POST['LI'];
+        $input['CA'] = $_POST['CA'];
+        $input['CO'] = $_POST['CO'];
+
+        require_once 'model/IndexModel.php';
+        $model = new IndexModel();
+        $data = $model->exec_query('sp_get_redes()');
+
+        $evaluated_data = ['RE', 'LI', 'CA','CO'];
+
+        $type = $this->calc_euclides_distance($data, $input, $evaluated_data, 'Class');
+
+        if ($type == 1)
+            echo 'A';
+        else
+            echo 'B';
+    }
 }
