@@ -42,5 +42,10 @@ class IndexController
     {
         $this->view->show("NetworksView.php");
     }
+
+    public function showCrossValidation()
+    {
+        $this->view->show("CrossValidationView.php");
+    }
     
 } 

@@ -15,7 +15,7 @@ include 'public/header.php'
         </div>
         <div class="form-group">
             <label for="average">Ultimo promedio de matricula: </label>
-            <input type="text" class="form-control" id="average" placeholder="Promedio" name="average">
+            <input type="text" class="form-control" id="average" placeholder="0.00" name="average">
         </div>
         <div class="form-group">
             <label for="gender">Sexo: </label>
@@ -24,13 +24,14 @@ include 'public/header.php'
                 <option value="0">Masculino</option>
             </select>
         </div>
-        <button type="button" onclick="getStyle()" class="btn btn-primary">Buscar</button>
+        <button type="button" onclick="checkInput()" class="btn btn-primary">Buscar</button>
         <p>El recinto de origen es: <span id="loading" class="spinner-border"></span><span id="style"></span> </p>
     </form>
 </div>
 
 
 <script>
+    const isValid = /^(\d+)$|^(\d{1}\.{1}\d{2})$|^(\d{1}\.{1}\d{1})$/;
     window.onload = function() {
         $('#loading').hide();
     };
@@ -60,6 +61,16 @@ include 'public/header.php'
                 $('#style').show();
             }
         });
+    }
+
+    function checkInput() {
+        let average = $('#average').val();
+        if (!isValid.test(average) || average > 10 || average < 0) {
+            alert('Ups ingresa un promedoi válido entre 0 y 10. Ejemplos \n7.5\n7.55\n7\n10');
+            return;
+        } else {
+            getStyle();
+        }
     }
 </script>
 

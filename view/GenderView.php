@@ -67,7 +67,7 @@ include 'public/header.php'
     function checkInput(){
         let average = $('#average').val();
         if (!isValid.test(average) || average > 10 || average < 0) {
-            alert('Upd ingresa un promedop válido. Ejemplos \n7.5\n7.55\n7\n10');
+            alert('Ups ingresa un promedoi válido entre 0 y 10. Ejemplos \n7.5\n7.55\n7\n10');
             return;
         }else{
             getGender();

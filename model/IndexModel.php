@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ * Modelo con conexión a la base de datos
  *
  * @author David
  */
@@ -14,13 +14,13 @@ class IndexModel
         $this->db = SPDO::singleton();
     }
 
-    /*
-        Descripción:
-        Ejecuta procedimiento almacenado
-
-        @param string $sp nombre del procedimiento almacenado
-
-        @return array $result tabla resultante
+    /**
+     *  
+     *   Descripción:
+     *   Ejecuta procedimiento almacenado
+     *
+     *   @param string $sp nombre del procedimiento almacenado
+     *   @return array $result tabla resultante
     */
     public function exec_query($sp)
     {
