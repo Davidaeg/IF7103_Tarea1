@@ -25,7 +25,7 @@ include 'public/header.php'
             </select>
         </div>
         <button type="button" onclick="checkInput()" class="btn btn-primary">Buscar</button>
-        <p>El recinto de origen es: <span id="loading" class="spinner-border"></span><span id="style"></span> </p>
+        <p>El Estilo de aprendizaje es: <span id="loading" class="spinner-border"></span><span id="style"></span> </p>
     </form>
 </div>
 
