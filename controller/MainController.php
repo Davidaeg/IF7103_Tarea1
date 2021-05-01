@@ -23,7 +23,7 @@ class MainController
         $evaluated_data = ['EC', 'OR', 'CA', 'EA']; //Se define las columnas que se van a evaluar
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $style = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Estilo');
 
@@ -61,7 +61,7 @@ class MainController
         $evaluated_data = ['Sexo', 'Promedio', 'Estilo'];
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $campus = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Recinto');
 
@@ -88,7 +88,7 @@ class MainController
         $evaluated_data = ['Estilo', 'Promedio', 'Recinto'];
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $gender = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Sexo');
 
@@ -115,7 +115,7 @@ class MainController
         $evaluated_data = ['Sexo', 'Promedio', 'Recinto'];
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $style = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Estilo');
 
@@ -150,7 +150,7 @@ class MainController
         $evaluated_data = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $type = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Class');
 
@@ -181,7 +181,7 @@ class MainController
         $evaluated_data = ['RE', 'LI', 'CA', 'CO'];
 
         // se envía a calcular distancia de euclides. último parametro: el dato que quiere predecir
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $type = $algorithms->calc_euclides_distance($data, $input, $evaluated_data, 'Class');
 
@@ -206,7 +206,7 @@ class MainController
         $evaluated_data = ['Recinto','CA', 'EC', 'EA', 'OR','CA-EC','EA-OR', 'Estilo'];
 
         // se envía a calcular k_fold_cross_validation
-        require_once 'algorithms/Algorithms.php ';
+        require_once 'algorithms/Algorithms.php';
         $algorithms = new Algorithms();
         $outcome = $algorithms->k_fold_cross_validation($data, $evaluated_data, $k);
 
