@@ -9,6 +9,7 @@ include 'public/header.php'
         <p>Curso IF7103</p>
         <p>David Alvarado Elizondo</p>
         <p>B60315</p>
+        <p>I Semestre 2021</p>
     </center>
 
 </div>

@@ -31,22 +31,25 @@ include 'public/header.php'
 
 
 <script>
-    const isValid = /^(\d+)$|^(\d{1}\.{1}\d{2})$|^(\d{1}\.{1}\d{1})$/;
+    const isValid = /^(\d+)$|^(\d{1}\.{1}\d{2})$|^(\d{1}\.{1}\d{1})$/; //para validar el input del promedio
     window.onload = function() {
         $('#loading').hide();
     };
 
     function getStyle() {
 
-        average = $('#average').val();
+        average = $('#average').val(); //Captura parametros
         campus = $('#campus').val();
         gender = $('#gender').val();
 
+        //Crea vector con parametros
         parameters = {
             "gender": gender,
             "average": average,
             "campus": campus
         };
+
+        //Consulta utilizando ajax
         $.ajax({
             url: '?controller=Main&action=getStyle2',
             type: 'POST',
@@ -63,6 +66,9 @@ include 'public/header.php'
         });
     }
 
+    /**
+     * Comprueba si el promdio es válido antes de convocar al proceso que llamará al controlador
+     */
     function checkInput() {
         let average = $('#average').val();
         if (!isValid.test(average) || average > 10 || average < 0) {
